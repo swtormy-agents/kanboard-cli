@@ -8,6 +8,28 @@ MIT licensed. Third-party notices in [NOTICE](NOTICE); release archives also shi
 
 ## Install
 
+Prebuilt archives are published on [GitHub Releases](https://github.com/swtormy-agents/kanboard-cli/releases) for **Linux**, **macOS**, and **Windows** (`amd64` and `arm64`). `checksums.txt` in each release lists SHA-256 hashes for every archive.
+
+**Linux (amd64)** — replace `VERSION` with the release tag (without `v`):
+
+```bash
+curl -fsSL -o kanboard.tar.gz \
+  "https://github.com/swtormy-agents/kanboard-cli/releases/download/vVERSION/kanboard_linux_amd64.tar.gz"
+tar -xzf kanboard.tar.gz
+./kanboard_linux_amd64/kanboard --version
+```
+
+**macOS (Apple Silicon or Intel)** — pick `kanboard_darwin_arm64` or `kanboard_darwin_amd64`:
+
+```bash
+curl -fsSL -o kanboard.tar.gz \
+  "https://github.com/swtormy-agents/kanboard-cli/releases/download/vVERSION/kanboard_darwin_arm64.tar.gz"
+tar -xzf kanboard.tar.gz
+./kanboard_darwin_arm64/kanboard --version
+```
+
+**Windows** — download `kanboard_windows_amd64.zip` or `kanboard_windows_arm64.zip` from the release page and add the folder to your `PATH`.
+
 Or install from source with Go **1.26.10** (matches `go.mod`):
 
 ```bash
